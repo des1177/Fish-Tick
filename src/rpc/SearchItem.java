@@ -18,7 +18,8 @@ import db.DBConnectionFactory;
 import entity.Item;
 
 /**
- * Servlet implementation class SearchItem
+ * Servlet for user to search tickets
+ 
  */
 @WebServlet("/search")
 public class SearchItem extends HttpServlet {
