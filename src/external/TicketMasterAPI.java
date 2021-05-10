@@ -59,7 +59,7 @@ public class TicketMasterAPI {
 			// read and write the response content
 			BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
 			String inputLine;
-			StringBuilder response = new StringBuilder();
+			StringBuilder response = new StringBuilder(); // ticket info that returned from ticketMaster's API, not a JSON file, it is a string
 			while ((inputLine = in.readLine()) != null) {
 				response.append(inputLine);
 			}
