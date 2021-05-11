@@ -23,11 +23,7 @@ public class TicketMasterAPI {
 	private static final String API_KEY = "EASr4nf6HHQTsvvdJg0XsbUJX6GsPxUI";
 	
 	/**
-	 * Search the JSONArray results through TM API
-	 * @param lat latitude
-	 * @param lon longitude
-	 * @param keyword keyword is optional
-	 * @return JSONArray
+	 * Search the JSONArray results through ticket master API
 	 */
 	public List<Item> search(double lat, double lon, String keyword) {
 		List<Item> ret = new ArrayList<Item>();
