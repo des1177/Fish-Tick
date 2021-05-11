@@ -23,9 +23,10 @@ public class TicketMasterAPI {
 	private static final String API_KEY = "EASr4nf6HHQTsvvdJg0XsbUJX6GsPxUI";
 	
 	/**
-	 * Search the JSONArray results through ticket master API
+	 * pass lon and lat to ticket master API, ticket master API return a string of all ticket info, 
+	 * then we make the string a JSON array
 	 */
-	public List<Item> search(double lat, double lon, String keyword) {
+	public List<Item> search(double lat, double lon, String keyword) { 
 		List<Item> ret = new ArrayList<Item>();
 		if (keyword == null) keyword = DEFAULT_KEYWORD;
 		// translate keyword into URL-supported format
@@ -52,8 +53,8 @@ public class TicketMasterAPI {
 			if (responseCode != 200) {
 				
 			}
-			// read and write the response content
-			BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+			// read and write the response content from ticketMaster API
+			BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream())); // ticketMaster API will return info little by little
 			String inputLine;
 			StringBuilder response = new StringBuilder(); // ticket info that returned from ticketMaster's API, not a JSON file, it is a string
 			while ((inputLine = in.readLine()) != null) {
@@ -74,7 +75,7 @@ public class TicketMasterAPI {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return ret;
+		return ret; // each item in ret is a ticket info, ret is a list of tickets
 	}
 
 	
