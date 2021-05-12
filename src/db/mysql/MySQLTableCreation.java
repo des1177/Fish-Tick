@@ -27,7 +27,7 @@ public class MySQLTableCreation {
 			}
 
 			
-			// Step 2 Drop tables in case they exist.
+			// Step 2 Drop tables in case they exist： line 31 - 42
 			Statement stmt = conn.createStatement();
 			String sql = "DROP TABLE IF EXISTS categories";
 			stmt.executeUpdate(sql);
