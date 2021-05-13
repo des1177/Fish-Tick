@@ -1,5 +1,5 @@
 package db.mysql;
-// this URL is to reach mySQL database portion in 内存
+// this URL is to reach mySQL database 端口 in 内存
 public class MySQLDBUtil {
 	private static final String HOSTNAME = "localhost";
 	private static final String PORT_NUM = "3306"; // change it to your mysql port number
