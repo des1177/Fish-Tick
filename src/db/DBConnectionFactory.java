@@ -6,6 +6,7 @@ public class DBConnectionFactory {
 	// This should change based on the pipeline.
 	private static final String DEFAULT_DB = "mysql";
 	
+	 // let you choose to use MongoDB or mySQL
 	public static DBConnection getConnection(String db) {
 		switch (db) {
 		case "mysql":
