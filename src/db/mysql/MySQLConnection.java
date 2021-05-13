@@ -13,6 +13,7 @@ import db.DBConnection;
 import entity.Item;
 import entity.Item.ItemBuilder;
 import external.TicketMasterAPI;
+// PM是DBConnection，真正做事情的是这个文件
 
 public class MySQLConnection implements DBConnection{
 	
