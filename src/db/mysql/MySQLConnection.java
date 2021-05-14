@@ -52,8 +52,7 @@ public class MySQLConnection implements DBConnection{
 	}
 
 	/**
-	 * Operate on History table.
-	 * insert favorite information.
+	 * insert favorite information as new row on History table.
 	 */
 	@Override
 	public void setFavoriteItems(String userId, List<String> itemIds) {
