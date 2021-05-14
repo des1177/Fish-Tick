@@ -53,6 +53,7 @@ public class MySQLConnection implements DBConnection{
 
 	/**
 	 * insert favorite information as new row on History table.
+	 * Wrote APIs to allow users to save and review favorite tickets as a new column in History Table in mySQL database through Java database Connectivity
 	 */
 	@Override
 	public void setFavoriteItems(String userId, List<String> itemIds) {
