@@ -233,6 +233,7 @@ public class MySQLConnection implements DBConnection{
 
 	/**
 	 * Get the first name and last name and concat them to full name, given the userId
+	 *用户给你输入ID， 你在database里找到他名字然后返回
 	 */
 	@Override
 	public String getFullname(String userId) {
@@ -242,16 +243,16 @@ public class MySQLConnection implements DBConnection{
 			String sql = "SELECT first_name, last_name FROM users WHERE user_id = ?";
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			stmt.setString(1, userId);
-			ResultSet res = stmt.executeQuery();
+			ResultSet res = stmt.executeQuery(); // search in database
 			if (res.next()) name = String.join(" ", res.getString("first_name"), res.getString("last_name"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return name;
-	}
+	} 
 
 	/**
-	 * Verify the userId and password
+	 * Verify the userId and password, 看database里是否有这个用户
 	 */
 	@Override
 	public boolean verifyLogin(String userId, String password) {
