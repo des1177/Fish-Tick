@@ -21,7 +21,7 @@ public class GeoRecommendation {
 		// 1. Get all favorite itemIds
 		Set<String> favoriteItemIds = conn.getFavoriteItemIds(userId);
 		
-		// 2. Get all categories by favorite items, sort by count
+		// 2. Get all categories by user favorited items in database, sort by count
 		// {"sport": 5, "music":3, "art":2 }
 		// Use a map to store category and its counts
 		Map<String, Integer> allCategories = new HashMap<>();
