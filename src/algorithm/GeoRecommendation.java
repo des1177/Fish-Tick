@@ -22,6 +22,7 @@ public class GeoRecommendation {
 		Set<String> favoriteItemIds = conn.getFavoriteItemIds(userId);
 		
 		// 2. Get all categories by favorite items, sort by count
+		// {"sport": 5, "music":3, "art":2 }
 		// Use a map to store category and its counts
 		Map<String, Integer> allCategories = new HashMap<>();
 		for (String itemId: favoriteItemIds) {
@@ -45,9 +46,11 @@ public class GeoRecommendation {
 					}
 		});
 		
-		// 3. do search based on category, filter out favorite events, sort by distance
+		// 3. search in TicketMaster API based on category, sort by distance
 		
 		Set<Item> visitedItems = new HashSet<Item>();
+		
+		//filter out 已经收藏过的ticket
 		for (Entry<String ,Integer> category: categoryList) {
 			List<Item> items = conn.searchItems(lat, lon, category.getKey());
 			List<Item> filteredItems = new ArrayList<Item>();
