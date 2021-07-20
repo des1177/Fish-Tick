@@ -59,7 +59,6 @@ public class Item {
 	/**
 	 * A helper class to build the Item class
 	 * @author andaluo
-	 *
 	 */
 	public static class ItemBuilder{
 		private String itemId;
