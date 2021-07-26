@@ -31,7 +31,7 @@ public class RecommendItem extends HttpServlet {
     }
 
 	/**
-	 * Get the lat and lon and current userId, return a list of recommended items
+	 * Get the lat and lon and current userId, return a list of recommended items.
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String userId = request.getParameter("user_id");
