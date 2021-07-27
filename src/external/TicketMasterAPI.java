@@ -112,7 +112,7 @@ public class TicketMasterAPI {
 	
 	
 	/**
-	 * get the Address from the JSONObject
+	 * get the Address from the JSONObject.
 	 * @param event
 	 * @return A String of address
 	 * @throws JSONException
